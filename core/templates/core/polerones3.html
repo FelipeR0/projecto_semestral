@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedyToWear</title>
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <!--ICONOS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!--Barra de navegacion-->
+    <header id="header">
+        <img src="../imagenes/menuu.png" alt="logo" class="menu" id="menu">
+        <div class="contenedor_logo">
+            <a href="../html/inicio.html" class="logog">RedyToWear</a>
+        </div>
+        <div>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="../html/inicio.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="../html/poleras.html">Poleras</a>
+                    </li>
+                    <li>
+                        <a href="../html/pantalones.html">Pantalones</a>
+                    </li>
+                    <li>
+                        <a href="../html/polerones.html">Polerones</a>
+                    </li>
+                    <li>
+                        <a href="../html/about.html">Sobre nosotros</a>
+                    </li>
+                    <li>
+                        <a href="../html/registro.html">Inicio de sesion</a>
+                    </li>
+                    <li>
+                        <a href="../html/formulario tienda.html">Registrarse</a>
+                    </li>
+                    <li>
+                        <a href="../html/carrito.html">Carrito</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--Producto-->
+    <div class="container">
+        <div class="producto-imgs">
+            <img src="../imagenes/StussyHoodieFront3.png" alt="Imagen 1" class="producto-img">
+            <img src="../imagenes/StussyHoodieBack3.png" alt="Imagen 2" class="producto-img">
+        </div>
+        <div class="producto-info">
+            <h1>POLERON STU C.</h1>
+            <ul>
+                <li>Material:</li>
+                <li>70% Algodon</li>
+                <li>30% Poliester</li>
+                <li>Genero: unisex</li>
+                <li>Color: Negro</li>
+                <li>Diseño Bordado</li>
+                <li>Cordon tejido plano</li>
+                <li>Bolsillo canguro</li>
+                <li>Puños elasticados</li>
+                <li>Tallas: S/M/L/XL</li>
+                <li>S: 53 cm x 70 cm</li>
+                <li>M: 55 cm x 71 cm</li>
+                <li>L: 59 cm x 73 cm</li>
+                <li>XL: 63 cm x 75 cm</li>
+            </ul>
+            <div class="producto-tallas">
+                <label for="tallas">Tallas:</label>
+                <select id="tallas">
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="l">XL</option>
+                </select>
+            </div>
+            <p class="producto-precio">CLP$35.000</p>
+            <button id="agregar-al-carrito">Agregar al carrito</button>
+        </div>
+    </div>
+    <!--Final de la pagina -->
+    <footer class="bg-dark py-5">
+        <div class="container">
+            <div class="row text-white g-4">
+                <div class="col-md-6 col-lg-3">
+                    <a class="text-uppercase text-decoration-none brand text-white" href="../html/inicio.html">RTW</a>
+                    <p class="text-white text-muted mt-3">Somos una tienda en línea especializada en ofrecerte lo mejor
+                        de la moda urbana con una selección exclusiva de prendas de la reconocida marca STUSSY. Con sede
+                        en Huechuraba,Region Metropolitana, estamos dedicados a proporcionarte una experiencia única de
+                        compra en línea
+                        para los amantes del estilo urbano y contemporáneo..</p>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light">Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="my-3">
+                            <a href="about.html" class="text-white text-decoration-none text-muted">
+                                <i class="fas fa-chevron-right me-1"></i> Sobre nosotros
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="poleras.html" class="text-white text-decoration-none text-muted">
+                                <i class="fas fa-chevron-right me-1"></i> Poleras
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="pantalones.html" class="text-white text-decoration-none text-muted">
+                                <i class="fas fa-chevron-right me-1"></i> Pantalones
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="polerones.html" class="text-white text-decoration-none text-muted">
+                                <i class="fas fa-chevron-right me-1"></i> Polerones
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light mb-3">Contáctanos</h5>
+                    <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class="me-3">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class="fw-light">
+                            Sta. Elena de Huechuraba 1660, 8600036 Huechuraba, Región Metropolitana
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class="me-3">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="fw-light">
+                            RTW@AYUDA.cl
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class="me-3">
+                            <i class="fas fa-phone-alt"></i>
+                        </span>
+                        <span class="fw-light">
+                            +56229993000
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light mb-3">Nuestras Redes</h5>
+                    <div>
+                        <ul class="list-unstyled d-flex">
+                            <li>
+                                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-pinterest"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--JSS BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!--SCRIPTS-->
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>

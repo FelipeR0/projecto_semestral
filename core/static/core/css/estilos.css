@@ -1,0 +1,564 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.main-header {
+    padding: 0 20px;
+}
+
+.main-header__tittle {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #f1f1f1;
+    display: flex;
+}
+
+header > .contenedor_logo > a{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 45px;
+    line-height: 30px;
+    border-radius: 4px;
+}
+
+header > .contenedor_logo > a > .logog {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+header > div{
+    width: 50%;
+}
+.logo {
+    width: 100px;
+    height: 100%;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+nav > ul {
+    margin-right: 30px;
+}
+nav > ul > li {
+    display: inline;
+    margin-left: 5px;
+    font-size: 20px;
+}
+nav > ul > li > a {
+    color: #000;
+    text-decoration: none;
+}
+.contenedor_logo{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    width: 45px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: none;
+}
+/*DISPOSITIVOS*/
+@media (max-width: 480px){
+    .menu{
+        display: block;
+    }
+
+    header {
+        flex-direction: column;
+        height: 60px;
+        overflow: hidden;
+        transition: all 0.8s;
+    }
+
+    header > div{
+        width: 100%;
+    }
+
+    header .contenedor_logo{
+        justify-content: center;
+    }
+    header .logo{
+        margin-top: 10px;
+    }
+
+    nav{
+        justify-content: center;
+    }
+
+    nav > ul{
+        margin: 0;
+    }
+
+    nav > ul > li{
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+}
+
+/*Slider*/
+.container-slider {
+    margin: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 400%;
+    height: 900px;
+    margin-left: -100;
+    position: relative;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.slider__section {
+    width: 100%;
+    position: relative;
+}
+
+.slider__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.slider__btn:hover {
+    background: #fff;
+}
+
+.slider__btn--left {
+    left: 10px;
+}
+
+.slider__btn--right {
+    right: 10px;
+}
+
+.slider__content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+    z-index: 999;
+}
+
+.slider__title {
+    font-size: 2.2em;
+    margin: 0;
+}
+
+.slider__txt {
+    margin: 5px 0;
+}
+
+.slider__link {
+    display: block;
+    border: 1px solid #0022b8;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    margin: 20px auto;
+}
+
+/*producto*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+/*Carta de "sobre nosotros"*/
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.producto-imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.producto-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+.producto-info {
+    margin-top: 20px;
+}
+
+.producto-tallas {
+    margin-top: 10px;
+}
+
+.producto-precio {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#agregar-al-carrito {
+    display: block;
+    margin-top: 20px;
+}
+
+/*Tabla de contacto*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    /* Agrega borde de color negro */
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para las celdas al pasar el mouse por encima */
+th:hover,
+td:hover {
+    background-color: black;
+    /* Cambia el fondo a negro */
+    color: white;
+    /* Cambia el color de texto a blanco */
+}
+
+/* Estilos para el contenedor de la tabla */
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilos para el título del contenedor */
+.contact-info h2 {
+    text-align: center;
+}
+/*Registro*/
+.containerlogin {
+    position: relative;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px 0 30px 0;
+  }
+  
+  /* style inputs and link buttons */
+  input,
+  .btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none; /* remove underline from anchors */
+  }
+  
+  input:hover,
+  .btn:hover {
+    opacity: 1;
+  }
+  
+  /* add appropriate colors to fb, twitter and google buttons */
+  .fb {
+    background-color: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background-color: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background-color: #dd4b39;
+    color: white;
+  }
+  
+  /* style the submit button */
+  input[type=submit] {
+    background-color: #606060;
+    color: white;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #000000;
+  }
+  
+  /* Two-column layout */
+  .col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 0 50px;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* vertical line */
+  .vl {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border: 2px solid #ddd;
+    height: 175px;
+  }
+  
+  /* text inside the vertical line */
+  .inner {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 8px 10px;
+  }
+  
+  /* hide some text on medium and large screens */
+  .hide-md-lg {
+    display: none;
+  }
+  
+  /* bottom container */
+  .bottom-container {
+    text-align: center;
+    background-color: #666;
+    border-radius: 0px 0px 4px 4px;
+  }
+  
+  /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 650px) {
+    .col {
+      width: 100%;
+      margin-top: 0;
+    }
+    /* hide the vertical line */
+    .vl {
+      display: none;
+    }
+    /* show the hidden text on small screens */
+    .hide-md-lg {
+      display: block;
+      text-align: center;
+    }
+  }
+  
+ 
+/* formulario de registro */
+.formulario__titulo{
+    color: #000;
+    text-align: center;
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.form-register{
+    width: 98%;
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    border-radius: 7px;
+}
+.form__titulo{
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.contenedor-inputs{
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+input{
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+.input-48{
+    width: 48%;
+}
+.input-100{
+    width: 100%;
+}
+.form__link{
+    width: 100%;
+    margin: 7;
+    text-align: center;
+    font-size: 14px;
+}
+.alerta{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #000000;
+    padding-top: 20px;
+}

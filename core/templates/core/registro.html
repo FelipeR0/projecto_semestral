@@ -1,0 +1,186 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedyToWear</title>
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+        <!--CSS-->
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <!--ICONOS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!--Barra de navegacion-->
+    <header id="header">
+        <img src="{%static 'img/menuu.png' %}" alt="" class="menu" id="menu">
+        <div class="contenedor_logo">
+            <a href="../html/inicio.html" class="logog">RedyToWear</a>
+        </div>
+        <div>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="{%url 'home' %}">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'poleras' %}">Poleras</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'pantalones' %}">Pantalones</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'polerones' %}">Polerones</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'about' %}">Sobre nosotros</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'registro' %}">Inicio de sesion</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'formulario_tienda' %}">Registrarse</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'home' %}">Carrito</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--Contenedor de login-->
+    <h1 class="formulario__titulo">Registrarse</h1>
+    <form action="registrar.php" method="post" id="form" class="form-register">
+        <h2 class="form__titulo">CREA UNA CUENTA</h2>
+        <div class="contenedor-inputs">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="input-48">
+            <input type="text" id="apellidos" name="apellido" placeholder="Apellido" class="input-48">
+            <input type="email" id="correo" name="correo" placeholder="Correo" class="input-100">
+            <input type="text" id="rut" name="rut" placeholder="RUT" class="input-48">
+            <input type="password" id="clave" name="clave" placeholder="Contraseña" class="input-48">
+            <input type="date" name="" class="input-100">
+            <input type="submit" id="guardar" value="REGISTRARSE" class="btn-enviar">
+        </div>
+    </form> 
+<!--Final de la pagina -->
+<footer class="bg-dark py-5">
+    <div class="container">
+        <div class="row text-white g-4">
+            <div class="col-md-6 col-lg-3">
+                <a class="text-uppercase text-decoration-none brand text-white" href="../html/inicio.html">RTW</a>
+                <p class="text-white text-muted mt-3">Somos una tienda en línea especializada en ofrecerte lo mejor
+                    de la moda urbana con una selección exclusiva de prendas de la reconocida marca STUSSY. Con sede
+                    en Huechuraba,Region Metropolitana, estamos dedicados a proporcionarte una experiencia única de
+                    compra en línea
+                    para los amantes del estilo urbano y contemporáneo..</p>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <h5 class="fw-light">Links</h5>
+                <ul class="list-unstyled">
+                    <li class="my-3">
+                        <a href="about.html" class="text-white text-decoration-none text-muted">
+                            <i class="fas fa-chevron-right me-1"></i> Sobre nosotros
+                        </a>
+                    </li>
+                    <li class="my-3">
+                        <a href="poleras.html" class="text-white text-decoration-none text-muted">
+                            <i class="fas fa-chevron-right me-1"></i> Poleras
+                        </a>
+                    </li>
+                    <li class="my-3">
+                        <a href="pantalones.html" class="text-white text-decoration-none text-muted">
+                            <i class="fas fa-chevron-right me-1"></i> Pantalones
+                        </a>
+                    </li>
+                    <li class="my-3">
+                        <a href="polerones.html" class="text-white text-decoration-none text-muted">
+                            <i class="fas fa-chevron-right me-1"></i> Polerones
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <h5 class="fw-light mb-3">Contáctanos</h5>
+                <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                    <span class="me-3">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </span>
+                    <span class="fw-light">
+                        Sta. Elena de Huechuraba 1660, 8600036 Huechuraba, Región Metropolitana
+                    </span>
+                </div>
+                <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                    <span class="me-3">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="fw-light">
+                        RTW@AYUDA.cl
+                    </span>
+                </div>
+                <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                    <span class="me-3">
+                        <i class="fas fa-phone-alt"></i>
+                    </span>
+                    <span class="fw-light">
+                        +56229993000
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <h5 class="fw-light mb-3">Nuestras Redes</h5>
+                <div>
+                    <ul class="list-unstyled d-flex">
+                        <li>
+                            <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--JSS BOOTSTRAP-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+<!--SCRIPT-->
+<script src="{%static 'js/menu.js'%}"></script>
+<script src="{%static 'js/jquery formulario.js'%}"></script>
+<script src="{%static 'js/traducciones.js'%}"></script>
+</body>
+
+</html>
+</body>
+
+</html>    
